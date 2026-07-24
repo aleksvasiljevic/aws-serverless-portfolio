@@ -1,9 +1,19 @@
-document.getElementById('fetchBtn').addEventListener('click', () => {
-    const output = document.getElementById('output');
-    output.innerText = "Lade Daten aus AWS Lambda...";
-    
-    // Später verbinden wir hier das API Gateway!
-    setTimeout(() => {
-        output.innerText = "S3 Frontend aktiv! Sobald Lambda & API Gateway stehen, kommen hier Live-Daten an.";
-    }, 1000);
+document.addEventListener('DOMContentLoaded', () => {
+    const fetchBtn = document.getElementById('fetchBtn');
+    const resultElement = document.getElementById('output');
+
+    if (fetchBtn) {
+        fetchBtn.addEventListener('click', async () => {
+            resultElement.textContent = 'Lade Daten von AWS Lambda...';
+
+            try {
+                const response = await fetch('https://7al9ptotsc.execute-api.eu-central-1.amazonaws.com/data');
+                const data = await response.json();
+                resultElement.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                resultElement.textContent = 'Fehler beim Laden der Daten!';
+                console.error('Fetch Error:', error);
+            }
+        });
+    }
 });

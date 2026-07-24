@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Vasiljevic | Cloud Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aleksandar Vasiljevic</h1>
+        <p>Information Systems & Cloud Architecture</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Willkommen!</h2>
+            <p>Diese Website läuft auf einer echten AWS Serverless Architecture:</p>
+            <ul>
+                <li><strong>Frontend:</strong> S3 + CloudFront</li>
+                <li><strong>Backend:</strong> Node.js (AWS Lambda + API Gateway)</li>
+                <li><strong>Database:</strong> DynamoDB + RDS (MySQL)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Backend-API Test</h2>
+            <button id="fetchBtn">Daten laden</button>
+            <div id="output">Noch keine Daten geladen.</div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
