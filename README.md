@@ -1,15 +1,15 @@
-# AWS Serverless Web Application
+# Cloud Portfolio & Lebenslauf (AWS Serverless)
 
-## 🏗️ Architecture
-- **Frontend:** Static HTML/CSS/JS hosted on AWS S3 (Region: `eu-central-1`)
-- **CDN:** AWS CloudFront
-- **Backend:** Node.js (AWS Lambda) via API Gateway
-- **Databases:** AWS DynamoDB & AWS RDS (MySQL)
+Eine professionelle, moderne Portfolio-Webseite mit integriertem Lebenslauf, die vollständig auf einer **AWS Serverless Architektur** basiert.
 
-## 🚀 Setup Steps Completed
-- [x] S3 Bucket created in Frankfurt (`eu-central-1`)
-- [x] Static Website Hosting enabled
-- [x] Initial HTML/CSS/JS Frontend deployed
+## 🚀 Architektur & Tech Stack
 
--S3 Bucket erstellt unter Namen aleks-website-frontend
--Lambda Function erstellt unter Namen aleks-get-portfolio-data (Node.js 24.x)
+* **Frontend:** Statisches Hosting via **AWS S3**
+* **Backend:** REST-API implementiert mit **Node.js** auf **AWS Lambda** und **API Gateway**
+* **Datenbank:** **Amazon RDS (MySQL)** zur dynamischen Speicherung und Abfrage der Lebenslauf-Daten
+
+## 📂 Projektstruktur
+- `index.html` – Modernes Zwei-Spalten-Layout (angelehnt an professionelle CVs)
+- `style.css` – Responsives Design mit CSS Flexbox
+- `app.js` – Asynchroner Datenabruf (Fetch API) der AWS-Backend-Schnittstelle
+- `rds-lambda/` – Quellcode und Konfiguration für die Lambda-Funktion und Datenbankanbindung
