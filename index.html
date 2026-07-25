@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksandar Vasiljevic | Cloud Portfolio</title>
+    <title>Aleksandar Vasiljević | Lebenslauf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Aleksandar Vasiljevic</h1>
-        <p>Information Systems & Cloud Architecture</p>
-    </header>
+    <div class="cv-container">
 
-    <main>
-        <section class="card">
-            <h2>Willkommen!</h2>
-            <p>Diese Website läuft auf einer echten AWS Serverless Architecture:</p>
-            <ul>
-                <li><strong>Frontend:</strong> S3 + CloudFront</li>
-                <li><strong>Backend:</strong> Node.js (AWS Lambda + API Gateway)</li>
-                <li><strong>Database:</strong> DynamoDB + RDS (MySQL)</li>
-            </ul>
-        </section>
+        <!-- Kopfbereich: Foto + Name -->
+        <header class="cv-header">
+            <div class="header-photo">
+                <!-- Optional: <img src="foto.jpg" alt="Aleksandar Vasiljević"> statt der Initialen -->
+                <span>AV</span>
+            </div>
+            <div class="header-name">
+                <h1>Aleksandar<br>Vasiljević</h1>
+                <div class="header-title">Wirtschaftsinformatik-Student</div>
+            </div>
+        </header>
 
-        <section class="card">
-            <h2>Backend-API Test</h2>
-            <button id="fetchBtn">Daten laden</button>
-            <div id="output">Noch keine Daten geladen.</div>
-        </section>
-    </main>
+        <!-- Zweispaltiger Hauptteil -->
+        <div class="cv-body">
+
+            <!-- Linke Sidebar -->
+            <aside class="sidebar">
+                <div id="sidebar-content">
+                    <p class="ladehinweis">Lade Profildaten …</p>
+                </div>
+
+                <div class="sb-section">
+                    <div class="sb-header">Kontakt</div>
+                    <ul class="kontakt-liste">
+                        <li><span class="k-icon">✦</span> In der Wüste 22, 51381 Leverkusen</li>
+                        <li><span class="k-icon">✉</span> aleksvasiljevic2703@gmail.com</li>
+                        <li><span class="k-icon">☎</span> 0162 6909958</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Rechte Hauptspalte -->
+            <main class="main-content">
+                <div class="main-topbar">
+                    <button id="fetchBtn">Aktualisieren</button>
+                </div>
+                <div id="main-content">
+                    <p class="ladehinweis-main">Lade Lebenslauf …</p>
+                </div>
+            </main>
+
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
